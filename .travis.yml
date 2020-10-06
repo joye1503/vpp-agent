@@ -52,6 +52,12 @@ jobs:
       script:
         - make verify-binapi
         - make integration-tests
+    - stage: Integration
+      arch: arm64
+      env: VPP_VERSION=1908
+      script:
+        - make verify-binapi
+        - make integration-tests
     - env: VPP_VERSION=2001
       script:
         - make verify-binapi

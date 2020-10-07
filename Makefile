@@ -43,7 +43,7 @@ ifeq ($(VPP_VERSION),)
 VPP_VERSION=$(VPP_DEFAULT)
 $(info $$var VERSION is 1  [${VPP_VERSION}])
 endif
-
+$(info $$var VERSION is 2  [${VPP_VERSION}])
 $(info $$var IMG is 1  [${VPP_IMG}])
 VPP_IMG?=$(value VPP_$(VPP_VERSION)_IMAGE)
 $(info $$var IMG is 2  [${VPP_IMG}])

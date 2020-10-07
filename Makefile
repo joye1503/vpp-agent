@@ -45,11 +45,11 @@ $(info $$var VERSION is 1  [${VPP_VERSION}])
 endif
 $(info $$var VERSION is 2  [${VPP_VERSION}])
 $(info $$var IMG is 1  [${VPP_IMG}])
-
+VPP_IMG_A?=$(value VPP_$(VPP_VERSION)_IMAGE)
 $(info $$var IMG is 2  [${VPP_IMG}])
 ifeq ($(UNAME_ARCH), aarch64)
 $(info ************  TEST VERSION ************)
-VPP_IMG?=$(subst vpp-base,vpp-base-arm64,${VPP_IMG})
+VPP_IMG?=$(subst vpp-base,vpp-base-arm64,${VPP_IMG_A})
 $(info $$var iss [${VPP_IMG}])
 endif
 VPP_IMG?=$(value VPP_$(VPP_VERSION)_IMAGE)
